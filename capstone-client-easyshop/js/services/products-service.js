@@ -39,7 +39,7 @@ class ProductService {
     constructor() {
 
         //load list of photos into memory
-        axios.get("/images/products/photos.json")
+        axios.get("/capstone-client-easyshop/public/images/products/photos.json")
             .then(response => {
                 this.photos = response.data;
             });
@@ -48,6 +48,7 @@ class ProductService {
     hasPhoto(photo){
         return this.photos.filter(p => p == photo).length > 0;
     }
+
 
     addCategoryFilter(cat)
     {
